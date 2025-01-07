@@ -7,7 +7,7 @@ from pyrogram import filters
 load_dotenv()
 
 # Get this value from my.telegram.org/apps
-API_ID = int(getenv("API_ID", "25638120"))
+API_ID = int(getenv("API_ID", "27758016"))
 API_HASH = getenv("API_HASH")
 
 # Get your token from @BotFather on Telegram.
@@ -16,13 +16,13 @@ BOT_TOKEN = getenv("BOT_TOKEN")
 # Get your mongo url from cloud.mongodb.com
 MONGO_DB_URI = getenv("MONGO_DB_URI", None)
 
-DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 60))
+DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 6000))
 
 # Chat id of a group for logging bot's activities
 LOGGER_ID = int(getenv("LOGGER_ID", ""))
 
 # Get this value from @FallenxBot on Telegram by /id
-OWNER_ID = int(getenv("OWNER_ID", "5050578106"))
+OWNER_ID = int(getenv("OWNER_ID", "7224419362"))
 
 ## Fill these variables if you're deploying on heroku.
 # Your heroku app name
@@ -32,15 +32,15 @@ HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/jiosaavnmusic/JioSaavn",
+    "https://github.com/Marwin2002/JioSaavn",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 GIT_TOKEN = getenv(
     "GIT_TOKEN", None
 )  # Fill this variable if your upstream repository is private
 
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://www.jiosaavn.com/")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://www.jiosaavn.com/")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/The_Architect04")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/Team_Supporty")
 
 # Set this to True if you want the assistant to automatically leave chats after an interval
 AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", False))
@@ -52,7 +52,7 @@ SPOTIFY_CLIENT_SECRET = getenv("SPOTIFY_CLIENT_SECRET", None)
 
 
 # Maximum limit for fetching playlist's track from youtube, spotify, apple links.
-PLAYLIST_FETCH_LIMIT = int(getenv("PLAYLIST_FETCH_LIMIT", "50"))
+PLAYLIST_FETCH_LIMIT = int(getenv("PLAYLIST_FETCH_LIMIT", "700"))
 
 
 # Telegram audio and video file size limit (in bytes)
@@ -78,13 +78,13 @@ confirmer = {}
 
 
 START_IMG_URL = getenv(
-    "START_IMG_URL", "https://envs.sh/CwU.jpg"
+    "START_IMG_URL", "https://envs.sh/rEw.jpg"
 )
 PING_IMG_URL = getenv(
-    "PING_IMG_URL", "https://envs.sh/CLg.jpeg"
+    "PING_IMG_URL", "https://envs.sh/r2A.jpg"
 )
-PLAYLIST_IMG_URL = "https://envs.sh/CwU.jpg"
-STATS_IMG_URL = "https://envs.sh/CLg.jpeg"
+PLAYLIST_IMG_URL = "https://envs.sh/rw8.jpg"
+STATS_IMG_URL = "https://envs.sh/r2j.jpg"
 TELEGRAM_AUDIO_URL = "https://envs.sh/CLg.jpeg"
 TELEGRAM_VIDEO_URL = "https://envs.sh/CLg.jpeg"
 STREAM_IMG_URL = "https://envs.sh/CLg.jpeg"
