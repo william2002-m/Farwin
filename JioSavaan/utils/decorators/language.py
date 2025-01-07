@@ -1,6 +1,6 @@
 from JioSavaan.misc import SUDOERS
 from JioSavaan.utils.database import get_lang, is_maintenance
-from config import SUPPORT_GROUP
+from config import SUPPORT_CHAT
 from strings import get_string
 
 
