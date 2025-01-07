@@ -87,13 +87,13 @@ async def start_pm(client, message: Message, _):
     else:
         out = private_panel(_)
         vip = await message.reply_text(
-            f"**𝑯𝒆𝒚 𝑩𝒂𝒃𝒚 𐙚 {message.from_user.mention}**"
+            f"𝑯𝒆𝒚 𝑩𝒂𝒃𝒚 🪷 {message.from_user.mention}"
         )
-        await vip.edit_text(f"𝑯𝒆𝒚 𝑩𝒂𝒃𝒚 𐙚 {message.from_user.mention}  🫰")
-        await vip.edit_text(f"𝑯𝒆𝒚 𝑩𝒂𝒃𝒚 𐙚 {message.from_user.mention}  ❤️‍🩹")
-        await vip.edit_text(f"𝑯𝒆𝒚 𝑩𝒂𝒃𝒚 𐙚 {message.from_user.mention}  🍓")
-        await vip.edit_text(f"𝑯𝒆𝒚 𝑩𝒂𝒃𝒚 𐙚 {message.from_user.mention}  🦋")
-        await vip.edit_text(f"𝑯𝒆𝒚 𝑩𝒂𝒃𝒚 𐙚 {message.from_user.mention}  🌸")
+        await vip.edit_text(f"𝑯𝒆𝒚 𝑩𝒂𝒃𝒚 🧸⋆˚✿˖° {message.from_user.mention}  🫰")
+        await vip.edit_text(f"𝑯𝒆𝒚 𝑩𝒂𝒃𝒚 🧸⋆˚✿˖° {message.from_user.mention}  ❤️‍🩹")
+        await vip.edit_text(f"𝑯𝒆𝒚 𝑩𝒂𝒃𝒚 🧸⋆˚✿˖° {message.from_user.mention}  🍓")
+        await vip.edit_text(f"𝑯𝒆𝒚 𝑩𝒂𝒃𝒚 🧸⋆˚✿˖° {message.from_user.mention}  🦋")
+        await vip.edit_text(f"𝑯𝒆𝒚 𝑩𝒂𝒃𝒚 🧸⋆˚✿˖° {message.from_user.mention}  🌸")
 
         await vip.delete()
         vips = await message.reply_text("💐𝑰 𝒉𝒐𝒑𝒆 𝒚𝒐𝒖 𝒌𝒏𝒐𝒘 𝑪𝑷𝑹, 𝒃𝒆𝒄𝒂𝒖𝒔𝒆 𝒚𝒐𝒖 𝒋𝒖𝒔𝒕 𝒕𝒐𝒐𝒌 𝒎𝒚 𝒃𝒓𝒆𝒂𝒕𝒉 𝒂𝒘𝒂𝒚.!")
