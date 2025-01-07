@@ -28,6 +28,7 @@ from strings import get_string
 @LanguageStart
 async def start_pm(client, message: Message, _):
     await add_served_user(message.from_user.id)
+    await message.react("🌚")
     if len(message.text.split()) > 1:
         name = message.text.split(None, 1)[1]
         if name[0:4] == "help":
@@ -84,6 +85,45 @@ async def start_pm(client, message: Message, _):
                 )
     else:
         out = private_panel(_)
+        vip = await message.reply_text(
+            f"**𝑯𝒆𝒚 𝑩𝒂𝒃𝒚 𐙚 {message.from_user.mention}**"
+        )
+        await vip.edit_text(f"𝑯𝒆𝒚 𝑩𝒂𝒃𝒚 𐙚 {message.from_user.mention}  🫰")
+        await vip.edit_text(f"𝑯𝒆𝒚 𝑩𝒂𝒃𝒚 𐙚 {message.from_user.mention}  ❤️‍🩹")
+        await vip.edit_text(f"𝑯𝒆𝒚 𝑩𝒂𝒃𝒚 𐙚 {message.from_user.mention}  🍓")
+        await vip.edit_text(f"𝑯𝒆𝒚 𝑩𝒂𝒃𝒚 𐙚 {message.from_user.mention}  🦋")
+        await vip.edit_text(f"𝑯𝒆𝒚 𝑩𝒂𝒃𝒚 𐙚 {message.from_user.mention}  🌸")
+
+        await vip.delete()
+        vips = await message.reply_text("💐𝑰 𝒉𝒐𝒑𝒆 𝒚𝒐𝒖 𝒌𝒏𝒐𝒘 𝑪𝑷𝑹, 𝒃𝒆𝒄𝒂𝒖𝒔𝒆 𝒚𝒐𝒖 𝒋𝒖𝒔𝒕 𝒕𝒐𝒐𝒌 𝒎𝒚 𝒃𝒓𝒆𝒂𝒕𝒉 𝒂𝒘𝒂𝒚.!")
+        await asyncio.sleep(0.2)
+        await vips.edit_text("🌿𝑰 𝒉𝒐𝒑𝒆 𝒚𝒐𝒖 𝒌𝒏𝒐𝒘 𝑪𝑷𝑹, 𝒃𝒆𝒄𝒂𝒖𝒔𝒆 𝒚𝒐𝒖 𝒋𝒖𝒔𝒕 𝒕𝒐𝒐𝒌 𝒎𝒚 𝒃𝒓𝒆𝒂𝒕𝒉 𝒂𝒘𝒂𝒚..!")
+        await asyncio.sleep(0.2)
+        await vips.edit_text("🍄𝑰 𝒉𝒐𝒑𝒆 𝒚𝒐𝒖 𝒌𝒏𝒐𝒘 𝑪𝑷𝑹, 𝒃𝒆𝒄𝒂𝒖𝒔𝒆 𝒚𝒐𝒖 𝒋𝒖𝒔𝒕 𝒕𝒐𝒐𝒌 𝒎𝒚 𝒃𝒓𝒆𝒂𝒕𝒉 𝒂𝒘𝒂𝒚...!")
+        await asyncio.sleep(0.2)
+        await vips.edit_text("🥀𝑰 𝒉𝒐𝒑𝒆 𝒚𝒐𝒖 𝒌𝒏𝒐𝒘 𝑪𝑷𝑹, 𝒃𝒆𝒄𝒂𝒖𝒔𝒆 𝒚𝒐𝒖 𝒋𝒖𝒔𝒕 𝒕𝒐𝒐𝒌 𝒎𝒚 𝒃𝒓𝒆𝒂𝒕𝒉 𝒂𝒘𝒂𝒚.!")
+        await asyncio.sleep(0.2)
+        await vips.edit_text("🪷𝑰 𝒉𝒐𝒑𝒆 𝒚𝒐𝒖 𝒌𝒏𝒐𝒘 𝑪𝑷𝑹, 𝒃𝒆𝒄𝒂𝒖𝒔𝒆 𝒚𝒐𝒖 𝒋𝒖𝒔𝒕 𝒕𝒐𝒐𝒌 𝒎𝒚 𝒃𝒓𝒆𝒂𝒕𝒉 𝒂𝒘𝒂𝒚..!")
+        await asyncio.sleep(0.2)
+        await vips.edit_text("🌸𝑰 𝒉𝒐𝒑𝒆 𝒚𝒐𝒖 𝒌𝒏𝒐𝒘 𝑪𝑷𝑹, 𝒃𝒆𝒄𝒂𝒖𝒔𝒆 𝒚𝒐𝒖 𝒋𝒖𝒔𝒕 𝒕𝒐𝒐𝒌 𝒎𝒚 𝒃𝒓𝒆𝒂𝒕𝒉 𝒂𝒘𝒂𝒚...!")
+        await asyncio.sleep(0.2)
+        await vips.edit_text("🏵️𝑰 𝒉𝒐𝒑𝒆 𝒚𝒐𝒖 𝒌𝒏𝒐𝒘 𝑪𝑷𝑹, 𝒃𝒆𝒄𝒂𝒖𝒔𝒆 𝒚𝒐𝒖 𝒋𝒖𝒔𝒕 𝒕𝒐𝒐𝒌 𝒎𝒚 𝒃𝒓𝒆𝒂𝒕𝒉 𝒂𝒘𝒂𝒚.!")
+        await asyncio.sleep(0.2)
+        await vips.edit_text("🌼𝑰 𝒉𝒐𝒑𝒆 𝒚𝒐𝒖 𝒌𝒏𝒐𝒘 𝑪𝑷𝑹, 𝒃𝒆𝒄𝒂𝒖𝒔𝒆 𝒚𝒐𝒖 𝒋𝒖𝒔𝒕 𝒕𝒐𝒐𝒌 𝒎𝒚 𝒃𝒓𝒆𝒂𝒕𝒉 𝒂𝒘𝒂𝒚..!")
+        await asyncio.sleep(0.2)
+        await vips.edit_text("🌺𝑰 𝒉𝒐𝒑𝒆 𝒚𝒐𝒖 𝒌𝒏𝒐𝒘 𝑪𝑷𝑹, 𝒃𝒆𝒄𝒂𝒖𝒔𝒆 𝒚𝒐𝒖 𝒋𝒖𝒔𝒕 𝒕𝒐𝒐𝒌 𝒎𝒚 𝒃𝒓𝒆𝒂𝒕𝒉 𝒂𝒘𝒂𝒚...!")
+        await asyncio.sleep(0.1)
+        await vips.edit_text("🍀𝑰 𝒉𝒐𝒑𝒆 𝒚𝒐𝒖 𝒌𝒏𝒐𝒘 𝑪𝑷𝑹, 𝒃𝒆𝒄𝒂𝒖𝒔𝒆 𝒚𝒐𝒖 𝒋𝒖𝒔𝒕 𝒕𝒐𝒐𝒌 𝒎𝒚 𝒃𝒓𝒆𝒂𝒕𝒉 𝒂𝒘𝒂𝒚.!")
+        await asyncio.sleep(0.1)
+        await vips.edit_text("💮𝑰 𝒉𝒐𝒑𝒆 𝒚𝒐𝒖 𝒌𝒏𝒐𝒘 𝑪𝑷𝑹, 𝒃𝒆𝒄𝒂𝒖𝒔𝒆 𝒚𝒐𝒖 𝒋𝒖𝒔𝒕 𝒕𝒐𝒐𝒌 𝒎𝒚 𝒃𝒓𝒆𝒂𝒕𝒉 𝒂𝒘𝒂𝒚..!")
+        await asyncio.sleep(0.1)
+        await vips.edit_text("🌳𝑰 𝒉𝒐𝒑𝒆 𝒚𝒐𝒖 𝒌𝒏𝒐𝒘 𝑪𝑷𝑹, 𝒃𝒆𝒄𝒂𝒖𝒔𝒆 𝒚𝒐𝒖 𝒋𝒖𝒔𝒕 𝒕𝒐𝒐𝒌 𝒎𝒚 𝒃𝒓𝒆𝒂𝒕𝒉 𝒂𝒘𝒂𝒚...!")
+        
+        await vips.delete()
+
+        done = await message.reply_text("❤️‍🔥")
+        await asyncio.sleep(0.5)
+        await done.delete()
         await message.reply_photo(
             photo=config.START_IMG_URL,
             caption=_["start_2"].format(message.from_user.mention, app.mention),
