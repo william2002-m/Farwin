@@ -11,7 +11,7 @@ API_ID = "27758016"
 API_HASH = "8d34cfffe27ab461eabbf0091b1a27df"
 
 # Get your token from @BotFather on Telegram.
-BOT_TOKEN = "7940603237:AAHHv6naXlKgUK2ZvIP8Ao1izMpSRuAtg9w"
+BOT_TOKEN = "7940603237:AAHtpB-l7SqaG6Rm7tDhQpCM5UO4e52cGpk"
 
 # Get your mongo url from cloud.mongodb.com
 MONGO_DB_URI = "mongodb+srv://tennyson2002:tennyson2002@cluster0.h1vm3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
@@ -19,7 +19,7 @@ MONGO_DB_URI = "mongodb+srv://tennyson2002:tennyson2002@cluster0.h1vm3.mongodb.n
 DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 6000))
 
 # Chat id of a group for logging bot's activities
-LOGGER_ID = int(getenv("LOGGER_ID", "-1002142528647"))
+LOGGER_ID = int(getenv("LOGGER_ID", "-1002250226716"))
 
 # Get this value from @FallenxBot on Telegram by /id
 OWNER_ID = 7224419362
