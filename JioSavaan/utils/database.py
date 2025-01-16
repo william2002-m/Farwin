@@ -7,6 +7,7 @@ from JioSavaan import userbot
 from JioSavaan.core.mongo import mongodb
 
 authdb = mongodb.adminauth
+queriesdb = mongodb.queries
 authuserdb = mongodb.authuser
 autoenddb = mongodb.autoend
 autoleavedb = mongodb.autoleave
