@@ -43,6 +43,26 @@ playmode = {}
 playtype = {}
 skipmode = {}
 
+# Total Queries on bot
+
+
+async def get_queries() -> int:
+    chat_id = 98324
+    mode = await queriesdb.find_one({"chat_id": chat_id})
+    if not mode:
+        return 0
+    return mode["mode"]
+
+
+async def set_queries(mode: int):
+    chat_id = 98324
+    queries = await queriesdb.find_one({"chat_id": chat_id})
+    if queries:
+        mode = queries["mode"] + mode
+    return await queriesdb.update_one(
+        {"chat_id": chat_id}, {"$set": {"mode": mode}}, upsert=True
+    )
+
 
 async def get_assistant_number(chat_id: int) -> str:
     assistant = assistantdict.get(chat_id)
