@@ -30,7 +30,7 @@
 
         "description": "Get this value from https://my.telegram.org",
 
-        "value": "",
+        "value": "27758016",
 
         "required": true
 
@@ -40,7 +40,7 @@
 
         "description": "Get this value from https://my.telegram.org",
 
-        "value": "",
+        "value": "8d34cfffe27ab461eabbf0091b1a27df",
 
         "required": true
 
@@ -50,7 +50,7 @@
 
         "description": "A Bot's token from Botfather",
 
-        "value": "",
+        "value": "7940603237:AAHtpB-l7SqaG6Rm7tDhQpCM5UO4e52cGpk",
 
         "required": true
 
@@ -60,7 +60,7 @@
 
         "description": "Get a mongodb url from https://cloud.mongodb.com.",
 
-        "value": "",
+        "value": "mongodb+srv://tennyson2002:tennyson2002@cluster0.h1vm3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
 
         "required": true
 
@@ -70,7 +70,7 @@
 
         "description": "The user id of user whom you would like to add as OWNER.",
 
-        "value": "",
+        "value": "7224419362",
 
         "required": true
 
@@ -80,7 +80,7 @@
 
         "description": "A Pyrogram v2 String Session from Replit.",
 
-        "value": "BQEksaEAuGW_camOHfzt7ZlMgymuT2DAa_rkK_Hm4sQUFhWcb3P5BllIhKECrX8emtmnXTvERoDwtTlNSVgv6HiDmbQHHSCVsdl3mxbYPNBFDI9LFgC6LWMjitl5-dNeetK8iQeE18DvXN7jMb2hz4i7rLQWVwQLgsVs-4WYBhvh9rBjFcQuRGoe91ZnQFbrGfD2-PfpbqmBNfjJZt8w0mxKxybQEAwMvYwHf0jljSIXdiV3b7WSEX05LlqMpLxgj9QxeszILU1KlPakYr0Inlc_2sbuomQh9lKNUqk290kHBWjl1T0IatJRoOWLCA8_56nOMauIEXqqDcd7fz10XSdkRQtm7gAAAAHMEry6AA",
+        "value": "BQC86fAAbIP1EZaDdUQ_RTicHQSKFFzB24l7LTglDMDYXjwra-2D4coplxBze3usVS4OUM_P-q1buYgEhC5cJtxuV07jMHeMoA7rmtbmGWjufPkcRG-l4zuiWXCy2AET-M1BtljXVCFHhVGXmFIQLHAIoOqe8fPyVhmBoE-5Gao-kWCzJsua8ExyApduC4sEOazoc7h2udbFMZY_CtesqNVZpIEMC3MU4c08oJonQfOHfGZcv2kBUIgHyPZh42vpSTQ4l6jpkYlV5Vch1v5QrI1UoFq8AdYmHV9JaodslwgkF5nTUG2NY4EE_44E2d7i7FswoTeKO6_DCLn5lKnEYiU_Ep7QqgAAAAHoTI4-AA",
 
         "required": true
 
@@ -110,7 +110,7 @@
 
         "description": "Your Log Group ID, add your bot and promote as an admin with full rights!. Do not ever try to put channel ID here.",
 
-        "value": "",
+        "value": "-1002251188406",
 
         "required": true
 
