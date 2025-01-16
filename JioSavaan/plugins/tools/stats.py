@@ -9,14 +9,19 @@ from pyrogram.types import InputMediaPhoto, Message
 from pytgcalls.__version__ import __version__ as pytgver
 
 import config
+from config import BANNED_USERS
 from JioSavaan import app
 from JioSavaan.core.userbot import assistants
 from JioSavaan.misc import SUDOERS, mongodb
 from JioSavaan.plugins import ALL_MODULES
-from JioSavaan.utils.database import get_served_chats, get_served_users, get_sudoers
+from JioSavaan.utils.database import (
+    get_queries,
+    get_served_chats,
+    get_served_users,
+    get_sudoers,
+)
 from JioSavaan.utils.decorators.language import language, languageCB
 from JioSavaan.utils.inline.stats import back_stats_buttons, stats_buttons
-from config import BANNED_USERS
 
 
 @app.on_message(filters.command(["stats", "gstats"]) & filters.group & ~BANNED_USERS)
@@ -52,12 +57,14 @@ async def overall_stats(client, CallbackQuery, _):
     await CallbackQuery.edit_message_text(_["gstats_1"].format(app.mention))
     served_chats = len(await get_served_chats())
     served_users = len(await get_served_users())
+    total_queries = await get_queries()
     text = _["gstats_3"].format(
         app.mention,
         len(assistants),
         len(BANNED_USERS),
         served_chats,
         served_users,
+        total_queries,
         len(ALL_MODULES),
         len(SUDOERS),
         config.AUTO_LEAVING_ASSISTANT,
