@@ -13,20 +13,8 @@ from pytgcalls.exceptions import (
 )
 from pytgcalls.types import Update
 from pytgcalls.types.input_stream import AudioPiped, AudioVideoPiped
-from pytgcalls.types.input_stream.quality import MediumQualityVideo
+from pytgcalls.types.input_stream.quality import HighQualityAudio, MediumQualityVideo
 from pytgcalls.types.stream import StreamAudioEnded
-#########
-from pytgcalls.types.input_stream.quality import CustomQuality
-
-HighQualityAudio = CustomQuality(
-    bitrate=1024000,  
-    samplerate=192000,  
-    channels=2, 
-    codec="opus"
-)
-
-
-#########
 import config
 from JioSavaan import LOGGER, YouTube, app
 from JioSavaan.misc import db
