@@ -43,7 +43,7 @@ def circle(pfp, size=(500, 500)):
     return pfp
 
 def welcomepic(pic, user, chatname, id, uname):
-    background = Image.open("JioSavaan/assets/Brandedwel2.png")
+    background = Image.open("JioSavaan/assets/JioSavaanl2.png")
     pfp = Image.open(pic).convert("RGBA")
     pfp = circle(pfp)
     pfp = pfp.resize((825, 824))
@@ -72,7 +72,7 @@ async def greet_group(_, member: ChatMemberUpdated):
             user.photo.big_file_id, file_name=f"pp{user.id}.png"
         )
     except AttributeError:
-        pic = "JioSavaan/assets/Brandedwel2.png"
+        pic = "JioSavaan/assets/JioSavaanl2.png"
     if (temp.MELCOW).get(f"welcome-{member.chat.id}") is not None:
         try:
             await temp.MELCOW[f"welcome-{member.chat.id}"].delete()
@@ -86,13 +86,15 @@ async def greet_group(_, member: ChatMemberUpdated):
             member.chat.id,
             photo=welcomeimg,
             caption=f"""
-𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝗧𝗼 {member.chat.title}
-➖➖➖➖➖➖➖➖➖➖➖
-๏ 𝗡𝗔𝗠𝗘 ➠ {user.mention}
-๏ 𝗜𝗗 ➠ {user.id}
-๏ 𝐔𝐒𝐄𝐑𝐍𝐀𝐌𝐄 ➠ @{user.username}
-๏ 𝐌𝐀𝐃𝐄 𝐁𝐘 ➠ @BRANDEDKING82
-➖➖➖➖➖➖➖➖➖➖➖
+◦•●◉✿ ᴡᴇʟᴄᴏᴍᴇ ʙᴀʙʏ ✿◉●•◦ 
+▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▰
+
+➻ ɴᴀᴍᴇ » {user.mention}
+➻ ɪᴅ » {user.id}
+➻ ᴜsᴇʀɴᴀᴍᴇ » @{user.username}
+➻ ᴛᴏᴛᴀʟ ᴍᴇᴍʙᴇʀs » {count}
+
+▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▰
 """,
             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f"⦿ ᴀᴅᴅ ᴍᴇ ⦿", url=f"https://t.me/BRANDED_KUDI_BOT?startgroup=true")]])
         )
