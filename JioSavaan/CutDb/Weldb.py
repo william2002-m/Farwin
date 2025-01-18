@@ -1,4 +1,4 @@
-from DAXXMUSIC.CutDb import *
+from JioSavaan.CutDb import *
 
 wlcm = dbname["welcome"]
 
