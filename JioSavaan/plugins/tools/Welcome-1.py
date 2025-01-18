@@ -1,14 +1,12 @@
 import os
-from unidecode import unidecode
 from PIL import ImageDraw, Image, ImageFont, ImageChops
 from pyrogram import *
 from pyrogram.types import *
 from logging import getLogger
-from DAXXMUSIC import LOGGER
+from JioSavaan import app
 from pyrogram.types import Message
-from DAXXMUSIC.misc import SUDOERS
-from DAXXMUSIC import app
-from DAXXMUSIC.CutDb.Weldb import *
+from JioSavaan.misc import SUDOERS
+from JioSavaan import app
 from config import LOGGER_ID
 
 LOGGER = getLogger(__name__)
@@ -23,26 +21,26 @@ class temp:
     B_NAME = None
 
 def circle(pfp, size=(450, 450)):
-    pfp = pfp.resize(size, Image.ANTIALIAS).convert("RGBA")
+    pfp = pfp.resize(size, Image.LANCZOS).convert("RGBA")
     bigsize = (pfp.size[0] * 3, pfp.size[1] * 3)
     mask = Image.new("L", bigsize, 0)
     draw = ImageDraw.Draw(mask)
     draw.ellipse((0, 0) + bigsize, fill=255)
-    mask = mask.resize(pfp.size, Image.ANTIALIAS)
+    mask = mask.resize(pfp.size, Image.LANCZOS)
     mask = ImageChops.darker(mask, pfp.split()[-1])
     pfp.putalpha(mask)
     return pfp
 
 def welcomepic(pic, user, chat, id, uname):
-    background = Image.open("DAXXMUSIC/assets/WELL2.PNG")
+    background = Image.open("JioSavaan/assets/WELL2.PNG")
     pfp = Image.open(pic).convert("RGBA")
     pfp = circle(pfp)
     pfp = pfp.resize(
         (450, 450)
     ) 
     draw = ImageDraw.Draw(background)
-    font = ImageFont.truetype('DAXXMUSIC/assets/font.ttf', size=50)
-    font2 = ImageFont.truetype('DAXXMUSIC/assets/font.ttf', size=90)
+    font = ImageFont.truetype('JioSavaan/assets/font.ttf', size=50)
+    font2 = ImageFont.truetype('JioSavaan/assets/font.ttf', size=90)
     draw.text((65, 250), f'NAME : {unidecode(user)}', fill=(255, 255, 255), font=font)
     draw.text((65, 340), f'ID : {id}', fill=(255, 255, 255), font=font)
     draw.text((65, 430), f"USERNAME : {uname}", fill=(255,255,255),font=font)
@@ -106,7 +104,7 @@ async def greet_group(_, member: ChatMemberUpdated):
             user.photo.big_file_id, file_name=f"pp{user.id}.png"
         )
     except AttributeError:
-        pic = "assets/NODP.PNG"
+        pic = "JioSavaan/assets/NODP.PNG"
     if (temp.MELCOW).get(f"welcome-{member.chat.id}") is not None:
         try:
             await temp.MELCOW[f"welcome-{member.chat.id}"].delete()
@@ -120,15 +118,15 @@ async def greet_group(_, member: ChatMemberUpdated):
             member.chat.id,
             photo=welcomeimg,
             caption= f"""
-**
-ㅤㅤㅤ◦•●◉✿ ᴡᴇʟᴄᴏᴍᴇ ʙᴀʙʏ ✿◉●•◦
+
+ㅤ◦•●◉✿ ᴡᴇʟᴄᴏᴍᴇ ʙᴀʙʏ ✿◉●•◦
 ▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▰
 
 ● ɴᴀᴍᴇ ➥  {user.mention}
 ● ᴜsᴇʀɴᴀᴍᴇ ➥  @{user.username}
 ● ᴜsᴇʀ ɪᴅ ➥  {user.id}
 
-❖ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➥ [๛ɴ ʏ ᴋ ᴀ ᴀ ࿐](https://t.me/nykaaxbot)**
+❖ 
 ▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▰
 """,
 reply_markup=InlineKeyboardMarkup(
