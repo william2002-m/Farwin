@@ -1,4 +1,4 @@
-from DAXXMUSIC import app
+from JioSavaan import app
 from pyrogram.errors import RPCError
 from pyrogram.types import ChatMemberUpdated, InlineKeyboardMarkup, InlineKeyboardButton
 from os import environ
@@ -16,7 +16,7 @@ from asyncio import sleep
 from pyrogram import filters, Client, enums
 from pyrogram.enums import ParseMode
 from logging import getLogger
-from DAXXMUSIC.utils.daxx_ban import admin_filter
+from JioSavaan.utils.daxx_ban import admin_filter
 from PIL import ImageDraw, Image, ImageFont, ImageChops
 from pyrogram import *
 from pyrogram.types import *
@@ -28,15 +28,15 @@ import os
 import re
 import asyncio
 import time
-from DAXXMUSIC.utils.database import add_served_chat
+from JioSavaan.utils.database import add_served_chat
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
-from DAXXMUSIC.utils.database import get_assistant
+from JioSavaan.utils.database import get_assistant
 import asyncio
-from DAXXMUSIC.misc import SUDOERS
-from DAXXMUSIC.mongo.afkdb import PROCESS
+from JioSavaan.misc import SUDOERS
+from JioSavaan.mongo.afkdb import PROCESS
 from pyrogram import Client, filters
 from pyrogram.errors import UserAlreadyParticipant
-from DAXXMUSIC import app
+from JioSavaan import app
 import asyncio
 import random
 from pyrogram import Client, filters
@@ -47,7 +47,7 @@ from pyrogram.errors import (
     UserAlreadyParticipant,
     UserNotParticipant,
 )
-from DAXXMUSIC.utils.database import get_assistant, is_active_chat
+from JioSavaan.utils.database import get_assistant, is_active_chat
 
 
 
@@ -111,8 +111,8 @@ def welcomepic(pic, user, chatname, id, uname, brightness_factor=1.3):
     pfp = circle(pfp, brightness_factor=brightness_factor) 
     pfp = pfp.resize((635, 635))
     draw = ImageDraw.Draw(background)
-    font = ImageFont.truetype('DAXXMUSIC/assets/font.ttf', size=70)
-    welcome_font = ImageFont.truetype('DAXXMUSIC/assets/font.ttf', size=61)
+    font = ImageFont.truetype('JioSavaan/assets/font.ttf', size=70)
+    welcome_font = ImageFont.truetype('JioSavaan/assets/font.ttf', size=61)
     #draw.text((630, 540), f'ID: {id}', fill=(255, 255, 255), font=font)
     #
  #   draw.text((630, 300), f'NAME: {user}', fill=(255, 255, 255), font=font)
@@ -177,7 +177,7 @@ async def greet_new_member(_, member: ChatMemberUpdated):
                 user.photo.big_file_id, file_name=f"pp{user.id}.png"
             )
         except AttributeError:
-            pic = "DAXXMUSIC/assets/upic.png"
+            pic = "JioSavaan/assets/upic.png"
         if (temp.MELCOW).get(f"welcome-{member.chat.id}") is not None:
             try:
                 await temp.MELCOW[f"welcome-{member.chat.id}"].delete()
@@ -195,7 +195,7 @@ async def greet_new_member(_, member: ChatMemberUpdated):
                 member.chat.id,
                 photo=welcomeimg,
                 caption=f"""
-**❅────✦ ᴡᴇʟᴄᴏᴍᴇ ✦────❅**
+❅────✦ ᴡᴇʟᴄᴏᴍᴇ ✦────❅
 
 ▰▰▰▰▰▰▰▰▰▰▰▰▰
 **➻ ɴᴀᴍᴇ »** {user.mention}
@@ -232,7 +232,7 @@ async def add_all(client, message):
         lol = await message.reply("🔄 **ᴀᴅᴅɪɴɢ ɢɪᴠᴇɴ ʙᴏᴛ ɪɴ ᴀʟʟ ᴄʜᴀᴛs!**")
         
         async for dialog in userbot.get_dialogs():
-            if dialog.chat.id == -1001919135283:
+            if dialog.chat.id == -1002251188406:
                 continue
             try:
                 await userbot.add_chat_members(dialog.chat.id, app_id)
