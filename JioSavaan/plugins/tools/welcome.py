@@ -68,20 +68,20 @@ async def greet_group(_, member: ChatMemberUpdated):
         return
     user = member.new_chat_member.user if member.new_chat_member else member.from_user
     try:
-        pic = await app.download_media(
-            user.photo.big_file_id, file_name=f"pp{user.id}.png"
-        )
-    except AttributeError:
-        pic = "JioSavaan/assets/upic.png"
-    if (temp.MELCOW).get(f"welcome-{member.chat.id}") is not None:
+            pic = await app.download_media(
+                user.photo.big_file_id, file_name=f"pp{user.id}.png"
+            )
+        except AttributeError:
+            pic = "assets/upic.png"
+        if (temp.MELCOW).get(f"welcome-{member.chat.id}") is not None:
+            try:
+                await temp.MELCOW[f"welcome-{member.chat.id}"].delete()
+            except Exception as e:
+                LOGGER.error(e)
         try:
-            await temp.MELCOW[f"welcome-{member.chat.id}"].delete()
-        except Exception as e:
-            LOGGER.error(e)
-    try:
-        welcomeimg = welcomepic(
-            pic, user.first_name, member.chat.title, user.id, user.username
-        )
+            welcomeimg = welcomepic(
+                pic, user.first_name, member.chat.title, user.id, user.username
+            )
         temp.MELCOW[f"welcome-{member.chat.id}"] = await app.send_photo(
             member.chat.id,
             photo=welcomeimg,
