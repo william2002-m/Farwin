@@ -68,11 +68,11 @@ async def greet_group(_, member: ChatMemberUpdated):
         return
     user = member.new_chat_member.user if member.new_chat_member else member.from_user
     try:
-            pic = await app.download_media(
-                user.photo.big_file_id, file_name=f"pp{user.id}.png"
-            )
-        except AttributeError:
-        pic = "assets/NODP.PNG"
+        pic = await app.download_media(
+            user.photo.big_file_id, file_name=f"pp{user.id}.png"
+        )
+    except AttributeError:
+        pic = "JioSavaan/assets/JioSavaan12.png"
     if (temp.MELCOW).get(f"welcome-{member.chat.id}") is not None:
         try:
             await temp.MELCOW[f"welcome-{member.chat.id}"].delete()
@@ -85,16 +85,14 @@ async def greet_group(_, member: ChatMemberUpdated):
         temp.MELCOW[f"welcome-{member.chat.id}"] = await app.send_photo(
             member.chat.id,
             photo=welcomeimg,
-            caption= f"""
-◦•●◉✿ ᴡᴇʟᴄᴏᴍᴇ ʙᴀʙʏ ✿◉●•◦ 
-▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▰
-
-➻ ɴᴀᴍᴇ » {user.mention}
-➻ ɪᴅ » {user.id}
-➻ ᴜsᴇʀɴᴀᴍᴇ » @{user.username}
-➻ ᴄʜᴀᴛ ᴛɪᴛʟᴇ » {member.chat.title}
-
-▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▰
+            caption=f"""
+𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝗧𝗼 {member.chat.title}
+➖➖➖➖➖➖➖➖➖➖➖
+๏ 𝗡𝗔𝗠𝗘 ➠ {user.mention}
+๏ 𝗜𝗗 ➠ {user.id}
+๏ 𝐔𝐒𝐄𝐑𝐍𝐀𝐌𝐄 ➠ @{user.username}
+๏ 𝐌𝐀𝐃𝐄 𝐁𝐘 ➠ 
+➖➖➖➖➖➖➖➖➖➖➖
 """,
             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f"⦿ ᴀᴅᴅ ᴍᴇ ⦿", url=f"https://t.me/BRANDED_KUDI_BOT?startgroup=true")]])
         )
