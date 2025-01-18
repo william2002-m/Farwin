@@ -42,9 +42,6 @@ def welcomepic(pic, user, chat, id, uname):
     draw = ImageDraw.Draw(background)
     font = ImageFont.truetype('JioSavaan/assets/font.ttf', size=50)
     font2 = ImageFont.truetype('JioSavaan/assets/font.ttf', size=90)
-    draw.text((65, 250), f'NAME : {unidecode(user)}', fill=(255, 255, 255), font=font)
-    draw.text((65, 340), f'ID : {id}', fill=(255, 255, 255), font=font)
-    draw.text((65, 430), f"USERNAME : {uname}", fill=(255,255,255),font=font)
     pfp_position = (767, 133)  
     background.paste(pfp, pfp_position, pfp)  
     background.save(
@@ -126,8 +123,9 @@ async def greet_group(_, member: ChatMemberUpdated):
 ● ɴᴀᴍᴇ ➥  {user.mention}
 ● ᴜsᴇʀɴᴀᴍᴇ ➥  @{user.username}
 ● ᴜsᴇʀ ɪᴅ ➥  {user.id}
+● ᴛᴏᴛᴀʟ ᴍᴇᴍʙᴇʀs ➥ {count}
 
-❖ 
+❖ ᴄʜᴀᴛ ᴛɪᴛʟᴇ ➥ {member.chat.title}
 ▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▰
 """,
 reply_markup=InlineKeyboardMarkup(
