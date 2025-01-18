@@ -4,11 +4,11 @@ from PIL import ImageDraw, Image, ImageFont, ImageChops
 from pyrogram import *
 from pyrogram.types import *
 from logging import getLogger
-from DAXXMUSIC import LOGGER
-from pyrogram.types import Message
-from DAXXMUSIC.misc import SUDOERS
-from DAXXMUSIC import app
-from DAXXMUSIC.CutDb.Weldb import *
+from JioSaavn import LOGGER
+from JioSaavn.types import Message
+from JioSaavn.misc import SUDOERS
+from JioSaavn import app
+from JioSaavn.CutDb.Weldb import *
 from config import LOGGER_ID
 
 LOGGER = getLogger(__name__)
@@ -133,7 +133,7 @@ async def greet_group(_, member: ChatMemberUpdated):
 """,
 reply_markup=InlineKeyboardMarkup(
 [
-[InlineKeyboardButton(f"ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ", url=f"https://t.me/nykaaxBot?startgroup=new"),
+[InlineKeyboardButton(f"ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ", url=f"https://t.me/AmritaMusicBot?startgroup=new"),
 ]
 ]
 ))
