@@ -23,7 +23,7 @@ class temp:
     B_NAME = None
 
 def circle(pfp, size=(450, 450)):
-    pfp = pfp.resize(size, Image.ANTIALIAS).convert("RGBA")
+    pfp = pfp.resize(size, Image.LANCZOS).convert("RGBA")
     bigsize = (pfp.size[0] * 3, pfp.size[1] * 3)
     mask = Image.new("L", bigsize, 0)
     draw = ImageDraw.Draw(mask)
