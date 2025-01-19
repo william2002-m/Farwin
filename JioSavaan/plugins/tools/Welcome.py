@@ -157,20 +157,20 @@ async def auto_state(_, message):
 
         if state == "off":
             if current_status == "off":
-                await message.reply_text("** ᴡᴇʟᴄᴏᴍᴇ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ ᴀʟʀᴇᴀᴅʏ ᴅɪsᴀʙʟᴇᴅ!**")
+                await message.reply_text("ᴡᴇʟᴄᴏᴍᴇ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ ᴀʟʀᴇᴀᴅʏ ᴅɪsᴀʙʟᴇᴅ!")
             else:
                 await set_welcome_status(chat_id, "off")
-                await message.reply_text(f"**ᴅɪsᴀʙʟᴇᴅ ᴡᴇʟᴄᴏᴍᴇ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ ɪɴ** {message.chat.title} **ʙʏ ʙᴏᴛ**")
+                await message.reply_text(f"ᴅɪsᴀʙʟᴇᴅ ᴡᴇʟᴄᴏᴍᴇ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ ɪɴ{message.chat.title}ʙʏ ʙᴏᴛ")
         elif state == "on":
             if current_status == "on":
-                await message.reply_text("**ᴇɴᴀʙʟᴇᴅ ʙᴏᴛ ᴡᴇʟᴄᴏᴍᴇ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ ᴀʟʀᴇᴀᴅʏ!**")
+                await message.reply_text("ᴇɴᴀʙʟᴇᴅ ʙᴏᴛ ᴡᴇʟᴄᴏᴍᴇ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ ᴀʟʀᴇᴀᴅʏ!")
             else:
                 await set_welcome_status(chat_id, "on")
-                await message.reply_text(f"**ᴇɴᴀʙʟᴇᴅ ʙᴏᴛ ᴡᴇʟᴄᴏᴍᴇ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ ɪɴ** {message.chat.title}")
+                await message.reply_text(f"ᴇɴᴀʙʟᴇᴅ ʙᴏᴛ ᴡᴇʟᴄᴏᴍᴇ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ ɪɴ{message.chat.title}")
         else:
             await message.reply_text(usage)
     else:
-        await message.reply("**sᴏʀʀʏ ᴏɴʟʏ ᴀᴅᴍɪɴs ᴄᴀɴ ᴇɴᴀʙʟᴇ ʙᴏᴛ ᴡᴇʟᴄᴏᴍᴇ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ!**")
+        await message.reply("sᴏʀʀʏ ᴏɴʟʏ ᴀᴅᴍɪɴs ᴄᴀɴ ᴇɴᴀʙʟᴇ ʙᴏᴛ ᴡᴇʟᴄᴏᴍᴇ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ!")
 
 @app.on_chat_member_updated(filters.group, group=-4)
 async def greet_new_members(_, member: ChatMemberUpdated):
@@ -231,7 +231,7 @@ async def greet_new_members(_, member: ChatMemberUpdated):
     f"🔗 𝑼𝒔𝒆𝒓𝒏𝒂𝒎𝒆 ➥ @{user.username}\n"  # Added closing quote and newline
     f"📩 𝑴𝒆𝒏𝒕𝒊𝒐𝒏 ➥ {user.mention}\n"  
     f"🌱 𝑪𝒉𝒂𝒕 𝑻𝒊𝒕𝒍𝒆 ➥ {chat_name}\n"
-    f"🕒 𝑱𝒐𝒊𝒏𝒆𝒅 𝑨𝒕 ➥ {joined_time}\n"
+    f"🕒 𝑱𝒐𝒊𝒏𝒆𝒅 𝑨𝒕 ➥ {joined_time}\n\n"
 
     f"❖ 𝑷𝒐𝒘𝒆𝒓 𝑩𝒚 ➥ 𝑻𝒉𝒆 𝑨𝒓𝒄𝒉𝒊𝒕𝒆𝒄𝒕彡\n"
     f"▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▰"
