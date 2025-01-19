@@ -84,7 +84,7 @@ def circle(pfp, size=(80, 80), brightness_factor=10):
     return outline
 
 def welcomepic(user_id, user_username, user_names, chat_name, user_photo, chat_photo):
-    background = Image.open("JioSavaan/assets/Well5.png")
+    background = Image.open("JioSavaan/assets/Well6.png")
     user_img = Image.open(user_photo).convert("RGBA")
     chat_img = Image.open(chat_photo).convert("RGBA")
     
@@ -223,12 +223,14 @@ async def greet_new_members(_, member: ChatMemberUpdated):
                     LOGGER.error(e)
 
             welcome_text = (
-    f"Welcome to {chat_name}\n\n"
-    f"Name: {user.first_name}\n"
-    f"User ID: {user_id}\n"
-    f"Username: @{user.username}\n"  # Added closing quote and newline
-    f"Mention: {user.mention}\n"      # Added newline for better formatting
-    f"Joined at: {joined_time}"
+    f"🌟 Welcome to {chat_name} 🌟\n\n"
+    f"▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▰\n"
+    f"👤 Name ➥ {user.first_name}\n"
+    f"🆔 User ID ➥ {user_id}\n"
+    f"🔗 Username ➥ @{user.username}\n"  # Added closing quote and newline
+    f"📩 Mention ➥ {user.mention}\n"      # Added newline for better formatting
+    f"🕒 Joined at ➥ {joined_time}"
+    f"▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▰"
 )
 
             await app.send_photo(chat_id, photo=welcomeimg, caption=welcome_text, reply_markup=reply_markup)
