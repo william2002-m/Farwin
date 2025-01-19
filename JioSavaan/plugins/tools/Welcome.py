@@ -223,13 +223,13 @@ async def greet_new_members(_, member: ChatMemberUpdated):
                     LOGGER.error(e)
 
             welcome_text = (
-                f"Welcome to {chat_name}\n\n"
-                f"Name: {user.first_name}\n"
-                f"User ID: {user_id}\n"
-                f"Username: @{user.username}
-                f"Mention: {user.mention}"
-                f"Joined at: {joined_time}"
-            )
+    f"Welcome to {chat_name}\n\n"
+    f"Name: {user.first_name}\n"
+    f"User ID: {user_id}\n"
+    f"Username: @{user.username}\n"  # Added closing quote and newline
+    f"Mention: {user.mention}\n"      # Added newline for better formatting
+    f"Joined at: {joined_time}"
+)
 
             await app.send_photo(chat_id, photo=welcomeimg, caption=welcome_text, reply_markup=reply_markup)
 
