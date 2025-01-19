@@ -221,14 +221,15 @@ async def greet_new_members(_, member: ChatMemberUpdated):
                     await temp.MELCOW[f"welcome-{member.chat.id}"].delete()
                 except Exception as e:
                     LOGGER.error(e)
-welcome_text = (
-    f"🌟 Welcome to {chat_name} 🌟\n\n"
-    f"👤 Name: {user.first_name}\n"
-    f"🆔 User ID: {user_id}\n"
-    f"🔗 Username: @{user.username}\n"
-    f"📩 Mention: {user.mention}\n"
-    f"🕒 Joined at: {joined_time}"
-)
+
+            welcome_text = (
+                f"**{convert_to_small_caps('ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ')}** {convert_to_small_caps(chat_name)}\n\n"
+                f"**{convert_to_small_caps('ɴᴀᴍᴇ')} :** {convert_to_small_caps(user.first_name)}\n"
+                f"**{convert_to_small_caps('ᴜꜱᴇʀ ɪᴅ')} :** `{user_id}`\n"
+                f"**{convert_to_small_caps('ᴜꜱᴇʀɴᴀᴍᴇ')} :** [{convert_to_small_caps(user_username)}](tg://openmessage?user_id={user_id})\n"
+                f"**{convert_to_small_caps('ᴍᴇɴᴛɪᴏɴ')} :** [ᴏᴘᴇɴ ᴘʀᴏғɪʟᴇ](tg://openmessage?user_id={user_id})\n"
+                f"**{convert_to_small_caps('ᴊᴏɪɴᴇᴅ ᴀᴛ')} :** {convert_to_small_caps(joined_time)}"
+            )
 
             await app.send_photo(chat_id, photo=welcomeimg, caption=welcome_text, reply_markup=reply_markup)
 
