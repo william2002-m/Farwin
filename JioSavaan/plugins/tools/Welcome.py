@@ -8,8 +8,8 @@ from PIL import Image, ImageChops, ImageDraw, ImageEnhance, ImageFont
 from pyrogram import enums, filters
 from pyrogram.types import ChatMemberUpdated
 import config
-from BADMUSIC import app
-from BADMUSIC.utils.database import get_assistant
+from JioSavaan import app
+from JioSavaan.utils.database import get_assistant
 from PIL import Image, ImageDraw, ImageFont, ImageEnhance, ImageChops
 from pyrogram import filters
 from pyrogram.types import ChatMemberUpdated, InlineKeyboardMarkup, InlineKeyboardButton
