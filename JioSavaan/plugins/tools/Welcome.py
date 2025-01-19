@@ -84,7 +84,7 @@ def circle(pfp, size=(80, 80), brightness_factor=10):
     return outline
 
 def welcomepic(user_id, user_username, user_names, chat_name, user_photo, chat_photo):
-    background = Image.open("JioSavaan/assets/wel2.png")
+    background = Image.open("JioSavaan/assets/Well3.png")
     user_img = Image.open(user_photo).convert("RGBA")
     chat_img = Image.open(chat_photo).convert("RGBA")
     
@@ -102,9 +102,9 @@ def welcomepic(user_id, user_username, user_names, chat_name, user_photo, chat_p
     pink = (255, 255, 255)   
     yellow = (19, 136, 8)
 
-    draw.text((450, 443), f"Name:  {user_names}", fill=red, font=font)
-    draw.text((450, 483), f"User Id:  {user_id}", fill=pink, font=font)
-    draw.text((450, 515), f"Username:  {user_username}", fill=yellow, font=font)
+    draw.text((450, 443), f"Name:  {user_names}", fill=purple, font=font)
+    draw.text((450, 483), f"User Id:  {user_id}", fill=purple, font=font)
+    draw.text((450, 515), f"Username:  {user_username}", fill=pellow, font=font)
     
     background.save(f"downloads/welcome#{user_id}.png")
     return f"downloads/welcome#{user_id}.png"
@@ -223,12 +223,12 @@ async def greet_new_members(_, member: ChatMemberUpdated):
                     LOGGER.error(e)
 
             welcome_text = (
-                f"**{convert_to_small_caps('ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ')}** {convert_to_small_caps(chat_name)}\n\n"
-                f"**{convert_to_small_caps('ɴᴀᴍᴇ')} :** {convert_to_small_caps(user.first_name)}\n"
-                f"**{convert_to_small_caps('ᴜꜱᴇʀ ɪᴅ')} :** `{user_id}`\n"
-                f"**{convert_to_small_caps('ᴜꜱᴇʀɴᴀᴍᴇ')} :** [{convert_to_small_caps(user_username)}](tg://openmessage?user_id={user_id})\n"
-                f"**{convert_to_small_caps('ᴍᴇɴᴛɪᴏɴ')} :** [ᴏᴘᴇɴ ᴘʀᴏғɪʟᴇ](tg://openmessage?user_id={user_id})\n"
-                f"**{convert_to_small_caps('ᴊᴏɪɴᴇᴅ ᴀᴛ')} :** {convert_to_small_caps(joined_time)}"
+                f"{convert_to_small_caps('ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ')} {convert_to_small_caps(chat_name)}\n\n"
+                f"{convert_to_small_caps('ɴᴀᴍᴇ')} : {convert_to_small_caps(user.first_name)}\n"
+                f"{convert_to_small_caps('ᴜꜱᴇʀ ɪᴅ')} : `{user_id}`\n"
+                f"{convert_to_small_caps('ᴜꜱᴇʀɴᴀᴍᴇ')} : @{user.username}
+                f"{convert_to_small_caps('ᴍᴇɴᴛɪᴏɴ')} : {user.mention}
+                f"{convert_to_small_caps('ᴊᴏɪɴᴇᴅ ᴀᴛ')} : {convert_to_small_caps(joined_time)}"
             )
             await app.send_photo(chat_id, photo=welcomeimg, caption=welcome_text, reply_markup=reply_markup)
 
