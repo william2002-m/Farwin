@@ -223,13 +223,17 @@ async def greet_new_members(_, member: ChatMemberUpdated):
                     LOGGER.error(e)
 
             welcome_text = (
-    f"🌟 Welcome to {chat_name} 🌟\n\n"
+    f"◦•●◉✿ 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𝒃𝒂𝒃𝒚 ✿◉●•◦\n\n"
     f"▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▰\n"
-    f"👤 Name ➥ {user.first_name}\n"
-    f"🆔 User ID ➥ {user_id}\n"
-    f"🔗 Username ➥ @{user.username}\n"  # Added closing quote and newline
-    f"📩 Mention ➥ {user.mention}\n"      # Added newline for better formatting
-    f"🕒 Joined at ➥ {joined_time}"
+                
+    f"👤 𝑵𝒂𝒎𝒆 ➥ {user.first_name}\n"
+    f"🆔 𝑼𝒔𝒆𝒓 𝑰𝑫 ➥ {user_id}\n"
+    f"🔗 𝑼𝒔𝒆𝒓𝒏𝒂𝒎𝒆 ➥ @{user.username}\n"  # Added closing quote and newline
+    f"📩 𝑴𝒆𝒏𝒕𝒊𝒐𝒏 ➥ {user.mention}\n"  
+    f"🌱 𝑪𝒉𝒂𝒕 𝑻𝒊𝒕𝒍𝒆 ➥ {chat_name}\n"
+    f"🕒 𝑱𝒐𝒊𝒏𝒆𝒅 𝑨𝒕 ➥ {joined_time}\n"
+
+    f"❖ 𝑷𝒐𝒘𝒆𝒓 𝑩𝒚 ➥ 𝑻𝒉𝒆 𝑨𝒓𝒄𝒉𝒊𝒕𝒆𝒄𝒕彡\n"
     f"▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▰"
 )
 
