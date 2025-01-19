@@ -222,29 +222,19 @@ async def greet_new_members(_, member: ChatMemberUpdated):
                 except Exception as e:
                     LOGGER.error(e)
 
-user = None  # This should be replaced with actual user fetching logic
-user_id = 12345  # Example user ID
-chat_name = "Example Chat"  # Example chat name
-joined_time = "2023-10-01 12:00 PM"  # Example joined time
-  if user is None:
-    welcome_text = (
-        f"◦•●◉✿ 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𝒃𝒂𝒃𝒚 ✿◉●•◦\n\n"
-        f"▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▰\n"
-        f"👤 𝑵𝒂𝒎𝒆 ➥ Unknown User\n"
-        f"🆔 𝑼𝒔𝒆𝒓 𝑰𝑫 ➥ {user_id}\n"
-        f"🔗 𝑼𝒔𝒆𝒓𝒏𝒂𝒎𝒆 ➥ @unknown\n"
-        f"📩 𝑴𝒆𝒏𝒕𝒊𝒐𝒏 ➥ @unknown\n"  
-        f"🌱 𝑪𝒉𝒂𝒕 𝑻𝒊𝒕𝒍𝒆 ➥ {chat_name}\n"
-        f"🕒 𝑱𝒐𝒊𝒏𝒆𝒅 𝑨𝒕 ➥ {joined_time}\n\n"
-        f"❖ 𝑷𝒐𝒘𝒆𝒓 𝐵𝑦 ➥ 𝑻𝒉𝒆 𝐴𝓇𝒸𝒽𝒾𝓉𝑒𝑐𝓉彡\n"
-        f"▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▰"
-    )
-else:
+try:
+    # Replace this with actual user fetching logic
+    user = None  # Simulating user fetching logic; replace with actual logic
+    # Simulate fetching user data (this is where an error might occur)
+    if user is None:  # Check if user is None (or handle based on your fetching logic)
+        raise ValueError("User not found")  # Simulating an error for demonstration
+
+    # If user is found, construct the welcome text
     welcome_text = (
         f"◦•●◉✿ 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𝒃𝒂𝒃𝒚 ✿◉●•◦\n\n"
         f"▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▰\n"
         f"👤 𝑵𝒂𝒎𝒆 ➥ {user.first_name}\n"
-        f"🆔 𝑼𝒔𝒆𝒓 𝑰𝑫 ➥ {user_id}\n"
+        f"🆔 𝑼𝒔𝒆𝒓 𝑰𝑫 ➥ {user.id}\n"
         f"🔗 𝑼𝒔𝒆𝒓𝒏𝒂𝒎𝒆 ➥ @{user.username}\n"
         f"📩 𝑴𝒆𝒏𝒕𝒊𝒐𝒏 ➥ {user.mention}\n"  
         f"🌱 𝑪𝒉𝒂𝒕 𝑻𝒊𝒕𝒍𝒆 ➥ {chat_name}\n"
@@ -252,6 +242,26 @@ else:
         f"❖ 𝐵𝐸𝐿𝐿𝐸𝐶𝐼𝐴𝐷𝐸 ➥ 𝐵𝐸𝐿𝐿𝐸𝐶𝐼𝐴𝐷𝐸\n"
         f"▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▰"
     )
+except ValueError as ve:
+    # Handle the case where the user was not found
+    welcome_text = (
+        f"◦•●◉✿ 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𝒃𝒂𝒃𝒚 ✿◉●•◦\n\n"
+        f"▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▰\n"
+        f"👤 𝑵𝒂𝒎𝒆 ➥ Unknown User\n"
+        f"🆔 𝑼𝒔𝒆𝒓 𝑰𝑫 ➥ Unknown\n"
+        f"🔗 𝑼𝒔𝒆𝒓𝒏𝒂𝒎𝒆 ➥ @unknown\n"
+        f"📩 𝑴𝒆𝒏𝒕𝒊𝒐𝒏 ➥ @unknown\n"  
+        f"🌱 𝑪𝒉𝒂𝒕 𝑻𝒊𝒕𝒍𝒆 ➥ {chat_name}\n"
+        f"🕒 𝑱𝒐𝒊𝒏𝒆𝒅 𝐴t ➥ {joined_time}\n\n"
+        f"❖ 𝐵𝐸𝐿𝐿𝐸𝐶𝐼𝐴𝐷𝐸 ➥ 𝐵𝐸𝐿𝐿𝐸𝐶𝐼𝐴𝐷𝐸\n"
+        f"▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▰"
+    )
+except Exception as e:
+    # Handle any other unexpected exceptions
+    welcome_text = "An unexpected error occurred."
+
+# Now you can use welcome_text as needed
+print(welcome_text)
             await app.send_photo(chat_id, photo=welcomeimg, caption=welcome_text, reply_markup=reply_markup)
 
     except Exception as e:
