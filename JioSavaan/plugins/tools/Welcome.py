@@ -84,7 +84,7 @@ def circle(pfp, size=(80, 80), brightness_factor=10):
     return outline
 
 def welcomepic(user_id, user_username, user_names, chat_name, user_photo, chat_photo):
-    background = Image.open("JioSavaan/assets/Well6.png")
+    background = Image.open("JioSavaan/assets/Well7.png")
     user_img = Image.open(user_photo).convert("RGBA")
     chat_img = Image.open(chat_photo).convert("RGBA")
     
