@@ -221,29 +221,6 @@ async def greet_new_members(_, member: ChatMemberUpdated):
                     await temp.MELCOW[f"welcome-{member.chat.id}"].delete()
                 except Exception as e:
                     LOGGER.error(e)
-
-            def stylize_text(text, style):
-    if style == 'bold':
-        return ''.join(['𝗯' if c == 'b' else '𝗼' if c == 'o' else '𝗹' if c == 'l' else '𝗱' if c == 'd' else c for c in text])
-    elif style == 'italic':
-        return ''.join(['𝑏' if c == 'b' else '𝑜' if c == 'o' else '𝑙' if c == 'l' else '𝑑' if c == 'd' else c for c in text])
-    return text
-
-# Example usage
-print(stylize_text("bold", "bold"))   # Output: 𝗯𝗼𝗹𝗱
-print(stylize_text("italic", "italic"))  # Output: 𝑏𝑜𝑙𝑑
-print(stylize_text("normal", "none"))  # Output: normal
-
-# Example usage
-print(stylize_text("bold", "bold"))   # Output: 𝗯𝗼𝗹𝗱
-print(stylize_text("italic", "italic"))  # Output: 𝑏𝑜𝑙𝑑
-print(stylize_text("normal", "none"))  # Output: normal
-
-user_first_name = user.first_name
-user_id = user.id
-chat_name = "Awesome Chat"
-joined_time = "2023-10-01"
-
 welcome_text = (
     f"🌟 Welcome to {stylize_text(chat_name)[1]} 🌟\n\n"
     f"👤 Name: {stylize_text(user_first_name)[0]}\n"
