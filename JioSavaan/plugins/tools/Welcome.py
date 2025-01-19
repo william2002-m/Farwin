@@ -221,6 +221,11 @@ async def greet_new_members(_, member: ChatMemberUpdated):
                     await temp.MELCOW[f"welcome-{member.chat.id}"].delete()
                 except Exception as e:
                     LOGGER.error(e)
+
+user = None  # This should be replaced with actual user fetching logic
+user_id = 12345  # Example user ID
+chat_name = "Example Chat"  # Example chat name
+joined_time = "2023-10-01 12:00 PM"  # Example joined time
   if user is None:
     welcome_text = (
         f"◦•●◉✿ 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𝒃𝒂𝒃𝒚 ✿◉●•◦\n\n"
