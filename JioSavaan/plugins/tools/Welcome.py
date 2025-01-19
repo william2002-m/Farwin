@@ -222,10 +222,10 @@ async def greet_new_members(_, member: ChatMemberUpdated):
                 except Exception as e:
                     LOGGER.error(e)
 welcome_text = (
-    f"🌟 Welcome to {stylize_text(chat_name)[1]} 🌟\n\n"
-    f"👤 Name: {stylize_text(user_first_name)[0]}\n"
-    f"🆔 User ID: {stylize_text(str(user_id))[1]}\n"
-    f"🔗 Username: @{stylize_text(user.username)[1]}\n"
+    f"🌟 Welcome to {chat_name} 🌟\n\n"
+    f"👤 Name: {user.first_name}\n"
+    f"🆔 User ID: {user_id}\n"
+    f"🔗 Username: @{user.username}\n"
     f"📩 Mention: {user.mention}\n"
     f"🕒 Joined at: {joined_time}"
 )
