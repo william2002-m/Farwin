@@ -222,11 +222,12 @@ async def greet_new_members(_, member: ChatMemberUpdated):
                 except Exception as e:
                     LOGGER.error(e)
 
-            def stylize_text(text):
-    # Example of converting text to different styles using Unicode
-    bold = ''.join(['𝗯' if c == 'b' else '𝗼' if c == 'o' else '𝗹' if c == 'l' else '𝗱' if c == 'd' else c for c in text])
-    italic = ''.join(['𝑖' if c == 'i' else '𝑡' if c == 't' else '𝑎' if c == 'a' else '𝑐' if c == 'c' else c for c in text])
-    return bold, italic
+            def stylize_text(text, style):
+    if style == 'bold':
+        return ''.join(['𝗯' if c == 'b' else '𝗼' if c == 'o' else '𝗹' if c == 'l' else '𝗱' if c == 'd' else c for c in text])
+    elif style == 'italic':
+        return ''.join(['𝑏' if c == 'b' else '𝑜' if c == 'o' else '𝑙' if c == 'l' else '𝑑' if c == 'd' else c for c in text])
+    return text
 
 user_first_name = user.first_name
 user_id = user.id
