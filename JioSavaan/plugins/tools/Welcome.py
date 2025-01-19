@@ -226,8 +226,8 @@ async def greet_new_members(_, member: ChatMemberUpdated):
                 f"Welcome to {chat_name}\n\n"
                 f"Name: {user.first_name}\n"
                 f"User ID: {user_id}\n"
-                f"Username: [{user_username}](tg://openmessage?user_id={user_id})\n"
-                f"Mention: [Open Profile](tg://openmessage?user_id={user_id})\n"
+                f"Username: @{user.username}
+                f"Mention: {user.mention}"
                 f"Joined at: {joined_time}"
             )
 
