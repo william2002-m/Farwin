@@ -84,6 +84,36 @@ async def auto_state(_, message):
   **  """
 #bhag 
 
+@app.on_message(filters.command("welcome") & ~filters.private)
+async def auto_state(_, message):
+    usage = "**ᴜsᴀɢᴇ:**\n**⦿ /welcome [on|off]**"
+    if len(message.command) == 1:
+        return await message.reply_text(usage)
+    chat_id = message.chat.id
+    user = await app.get_chat_member(message.chat.id, message.from_user.id)
+    if user.status in (
+        enums.ChatMemberStatus.ADMINISTRATOR,
+        enums.ChatMemberStatus.OWNER,
+    ):
+        A = await wlcm.find_one(chat_id)
+        state = message.text.split(None, 1)[1].strip().lower()
+        if state == "off":
+            if A:
+                await message.reply_text("**ᴡᴇʟᴄᴏᴍᴇ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ ᴀʟʀᴇᴀᴅʏ ᴅɪsᴀʙʟᴇᴅ !**")
+            else:
+                await wlcm.add_wlcm(chat_id)
+                await message.reply_text(f"**ᴅɪsᴀʙʟᴇᴅ ᴡᴇʟᴄᴏᴍᴇ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ ɪɴ** {message.chat.title}")
+        elif state == "on":
+            if not A:
+                await message.reply_text("**ᴇɴᴀʙʟᴇ ᴡᴇʟᴄᴏᴍᴇ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ.**")
+            else:
+                await wlcm.rm_wlcm(chat_id)
+                await message.reply_text(f"**ᴇɴᴀʙʟᴇᴅ ᴡᴇʟᴄᴏᴍᴇ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ ɪɴ ** {message.chat.title}")
+        else:
+            await message.reply_text(usage)
+    else:
+        await message.reply("**sᴏʀʀʏ ᴏɴʟʏ ᴀᴅᴍɪɴs ᴄᴀɴ ᴇɴᴀʙʟᴇ ᴡᴇʟᴄᴏᴍᴇ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ!**")
+
 @app.on_chat_member_updated(filters.group, group=-3)
 async def greet_group(_, member: ChatMemberUpdated):
     
