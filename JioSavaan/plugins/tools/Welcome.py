@@ -229,6 +229,11 @@ async def greet_new_members(_, member: ChatMemberUpdated):
         return ''.join(['𝑏' if c == 'b' else '𝑜' if c == 'o' else '𝑙' if c == 'l' else '𝑑' if c == 'd' else c for c in text])
     return text
 
+# Example usage
+print(stylize_text("bold", "bold"))   # Output: 𝗯𝗼𝗹𝗱
+print(stylize_text("italic", "italic"))  # Output: 𝑏𝑜𝑙𝑑
+print(stylize_text("normal", "none"))  # Output: normal
+
 user_first_name = user.first_name
 user_id = user.id
 chat_name = "Awesome Chat"
