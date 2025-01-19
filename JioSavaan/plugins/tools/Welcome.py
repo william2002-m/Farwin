@@ -222,11 +222,22 @@ async def greet_new_members(_, member: ChatMemberUpdated):
                 except Exception as e:
                     LOGGER.error(e)
 
-            welcome_text = (
-    f"🌟 Welcome to {chat_name} 🌟\n\n"
-    f"👤 Name: {user.first_name}\n"
-    f"🆔 User ID: {user_id}\n"
-    f"🔗 Username: @{user.username}\n"
+            def stylize_text(text):
+    # Example of converting text to different styles using Unicode
+    bold = ''.join(['𝗯' if c == 'b' else '𝗼' if c == 'o' else '𝗹' if c == 'l' else '𝗱' if c == 'd' else c for c in text])
+    italic = ''.join(['𝑖' if c == 'i' else '𝑡' if c == 't' else '𝑎' if c == 'a' else '𝑐' if c == 'c' else c for c in text])
+    return bold, italic
+
+user_first_name = user.first_name
+user_id = user.id
+chat_name = "Awesome Chat"
+joined_time = "2023-10-01"
+
+welcome_text = (
+    f"🌟 Welcome to {stylize_text(chat_name)[1]} 🌟\n\n"
+    f"👤 Name: {stylize_text(user_first_name)[0]}\n"
+    f"🆔 User ID: {stylize_text(str(user_id))[1]}\n"
+    f"🔗 Username: @{stylize_text(user.username)[1]}\n"
     f"📩 Mention: {user.mention}\n"
     f"🕒 Joined at: {joined_time}"
 )
