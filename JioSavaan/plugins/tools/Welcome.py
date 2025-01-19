@@ -9,6 +9,9 @@ from pyrogram.types import Message
 from JioSavaan.misc import SUDOERS
 from JioSavaan import app
 from config import LOGGER_ID
+from pymongo import MongoClient
+from pyrogram import Client, filters
+from pyrogram.types import ChatMemberUpdated
 
 LOGGER = getLogger(__name__)
 
