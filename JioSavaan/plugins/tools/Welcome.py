@@ -95,7 +95,7 @@ def welcomepic(user_id, user_username, user_names, chat_name, user_photo, chat_p
     background.paste(user_img_circle, (727, 260), user_img_circle)
     
     draw = ImageDraw.Draw(background)
-    font = ImageFont.truetype("assets/font.ttf", size=32)
+    font = ImageFont.truetype("JioSavaan/assets/font.ttf", size=32)
 
   
     red = (255, 153, 51)  
