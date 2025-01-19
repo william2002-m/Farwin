@@ -234,6 +234,11 @@ print(stylize_text("bold", "bold"))   # Output: 𝗯𝗼𝗹𝗱
 print(stylize_text("italic", "italic"))  # Output: 𝑏𝑜𝑙𝑑
 print(stylize_text("normal", "none"))  # Output: normal
 
+# Example usage
+print(stylize_text("bold", "bold"))   # Output: 𝗯𝗼𝗹𝗱
+print(stylize_text("italic", "italic"))  # Output: 𝑏𝑜𝑙𝑑
+print(stylize_text("normal", "none"))  # Output: normal
+
 user_first_name = user.first_name
 user_id = user.id
 chat_name = "Awesome Chat"
