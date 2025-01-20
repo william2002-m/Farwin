@@ -80,7 +80,7 @@ async def gen_thumb(vidid, current_position, total_duration):
 
         # Fonts
         font_title = ImageFont.truetype("JioSavaan/assets/font3.ttf", 45)
-        font_text = ImageFont.truetype("JioSavaan/assets/ont2.ttf", 30)
+        font_text = ImageFont.truetype("JioSavaan/assets/font2.ttf", 30)
 
         # Circular thumbnail
         circle_thumbnail = crop_center_circle(youtube, 400, 20)
