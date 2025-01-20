@@ -13,7 +13,7 @@ from JioSavaan.utils.exceptions import AssistantErr
 from JioSavaan.utils.inline import aq_markup, close_markup, stream_markup
 from JioSavaan.utils.pastebin import AnonyBin
 from JioSavaan.utils.stream.queue import put_queue, put_queue_index
-from JioSavaan.utils.thumbnails import get_thumb
+from JioSavaan.utils.thumbnails import gen_thumb
 
 
 async def stream(
