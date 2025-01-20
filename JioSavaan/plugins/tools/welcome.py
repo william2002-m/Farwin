@@ -177,16 +177,16 @@ async def greet_new_member(_, member: ChatMemberUpdated):
                 member.chat.id,
                 photo=welcomeimg,
                 caption=f"""
-❅────✦ ᴡᴇʟᴄᴏᴍᴇ ✦────❅
+◦•●◉✿ ᴡᴇʟᴄᴏᴍᴇ ʙᴀʙʏ ✿◉●•◦ 
 
-▰▰▰▰▰▰▰▰▰▰▰▰▰
+▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▰
 ➻ ɴᴀᴍᴇ » {user.mention}
-➻ ɪᴅ » `{user.id}`
-➻ ᴜ_ɴᴀᴍᴇ » @{user.username}
+➻ ᴜsᴇʀ ɪᴅ » `{user.id}`
+➻ ᴜsᴇʀɴᴀᴍᴇ » @{user.username}
 ➻ ᴛᴏᴛᴀʟ ᴍᴇᴍʙᴇʀs » `{count}`
-▰▰▰▰▰▰▰▰▰▰▰▰▰
+▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▰
 
-❅─────✧❅✦❅✧─────❅
+◦•●◉✿✿◉●•◦●∘◦❀◦∘●◦•●◉✿✿◉●•◦
 """,
 
                 reply_markup=InlineKeyboardMarkup([
