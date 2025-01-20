@@ -188,14 +188,17 @@ async def greet_new_member(_, member: ChatMemberUpdated):
 
 ❅─────✧❅✦❅✧─────❅
 """,
-parse_mode="markdown",
-                reply_markup=InlineKeyboardMarkup([
-                    [InlineKeyboardButton(button_text, url=deep_link)],
-                    [InlineKeyboardButton(text=add_button_text, url=add_link)],
-                ])
-            )
-        except Exception as e:
-            LOGGER.error(e)
-
+try:
+    await bot.send_message(
+        chat_id=chat_id,
+        text=your_message_text,
+        parse_mode="MarkdownV2",  # Change this line
+        reply_markup=InlineKeyboardMarkup([
+            [InlineKeyboardButton(button_text, url=deep_link)],
+            [InlineKeyboardButton(text=add_button_text, url=add_link)],
+        ])
+    )
+except Exception as e:
+    LOGGER.error(e)
 # Don't Remove/Edit This Line 👇
 # Created By - @ProBotts || @ZeoXpro
