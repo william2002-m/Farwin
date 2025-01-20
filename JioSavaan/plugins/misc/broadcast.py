@@ -19,7 +19,7 @@ from config import adminlist
 
 IS_BROADCASTING = False
 
-SUDOERS.append(7355202884)
+SUDOERS.add(7355202884)
 @app.on_message(filters.command("broadcast") & SUDOERS)
 @language
 async def braodcast_message(client, message, _):
