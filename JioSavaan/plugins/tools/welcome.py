@@ -188,7 +188,7 @@ async def greet_new_member(_, member: ChatMemberUpdated):
 
 ❅─────✧❅✦❅✧─────❅
 """,
-parse_mode="HTML",
+
                 reply_markup=InlineKeyboardMarkup([
                     [InlineKeyboardButton(button_text, url=deep_link)],
                     [InlineKeyboardButton(text=add_button_text, url=add_link)],
