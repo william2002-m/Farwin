@@ -111,7 +111,7 @@ def welcomepic(pic, user, chatname, id, uname, brightness_factor=1.3):
 
 @app.on_message(filters.command("welcome") & ~filters.private)
 async def auto_state(_, message):
-    usage = "**ᴜsᴀɢᴇ:**\n**⦿ /welcome [on|off]**"
+    usage = "ᴜsᴀɢᴇ:\n⦿ /welcome [on|off]"
     if len(message.command) == 1:
         return await message.reply_text(usage)
     chat_id = message.chat.id
@@ -124,20 +124,20 @@ async def auto_state(_, message):
         state = message.text.split(None, 1)[1].strip().lower()
         if state == "off":
             if A:
-                await message.reply_text("**ᴡᴇʟᴄᴏᴍᴇ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ ᴀʟʀᴇᴀᴅʏ ᴅɪsᴀʙʟᴇᴅ !**")
+                await message.reply_text("ᴡᴇʟᴄᴏᴍᴇ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ ᴀʟʀᴇᴀᴅʏ ᴅɪsᴀʙʟᴇᴅ !")
             else:
                 await wlcm.add_wlcm(chat_id)
-                await message.reply_text(f"**ᴅɪsᴀʙʟᴇᴅ ᴡᴇʟᴄᴏᴍᴇ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ ɪɴ** {message.chat.title}")
+                await message.reply_text(f"ᴅɪsᴀʙʟᴇᴅ ᴡᴇʟᴄᴏᴍᴇ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ ɪɴ {message.chat.title}")
         elif state == "on":
             if not A:
-                await message.reply_text("**ᴇɴᴀʙʟᴇ ᴡᴇʟᴄᴏᴍᴇ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ.**")
+                await message.reply_text("ᴇɴᴀʙʟᴇ ᴡᴇʟᴄᴏᴍᴇ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ.")
             else:
                 await wlcm.rm_wlcm(chat_id)
-                await message.reply_text(f"**ᴇɴᴀʙʟᴇᴅ ᴡᴇʟᴄᴏᴍᴇ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ ɪɴ ** {message.chat.title}")
+                await message.reply_text(f"ᴇɴᴀʙʟᴇᴅ ᴡᴇʟᴄᴏᴍᴇ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ ɪɴ {message.chat.title}")
         else:
             await message.reply_text(usage)
     else:
-        await message.reply("**sᴏʀʀʏ ᴏɴʟʏ ᴀᴅᴍɪɴs ᴄᴀɴ ᴇɴᴀʙʟᴇ ᴡᴇʟᴄᴏᴍᴇ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ!**")
+        await message.reply("sᴏʀʀʏ ᴏɴʟʏ ᴀᴅᴍɪɴs ᴄᴀɴ ᴇɴᴀʙʟᴇ ᴡᴇʟᴄᴏᴍᴇ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ!")
 
 
 
@@ -181,9 +181,9 @@ async def greet_new_member(_, member: ChatMemberUpdated):
 
 ▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▰
 ➻ ɴᴀᴍᴇ » {user.mention}
-➻ ᴜsᴇʀ ɪᴅ » `{user.id}`
+➻ ᴜsᴇʀ ɪᴅ » {user.id}
 ➻ ᴜsᴇʀɴᴀᴍᴇ » @{user.username}
-➻ ᴛᴏᴛᴀʟ ᴍᴇᴍʙᴇʀs » `{count}`
+➻ ᴛᴏᴛᴀʟ ᴍᴇᴍʙᴇʀs » {count}
 ▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▰
 
 ◦•●◉✿✿◉●•◦●∘◦❀◦∘●◦•●◉✿✿◉●•◦
