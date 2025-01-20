@@ -78,13 +78,13 @@ class temp:
 
 
 def circle(pfp, size=(500, 500), brightness_factor=10):
-    pfp = pfp.resize(size, Image.ANTIALIAS).convert("RGBA")
+    pfp = pfp.resize(size, Image.Resampling.LANCZOS).convert("RGBA")
     pfp = ImageEnhance.Brightness(pfp).enhance(brightness_factor)
     bigsize = (pfp.size[0] * 3, pfp.size[1] * 3)
     mask = Image.new("L", bigsize, 0)
     draw = ImageDraw.Draw(mask)
     draw.ellipse((0, 0) + bigsize, fill=255)
-    mask = mask.resize(pfp.size, Image.ANTIALIAS)
+    mask = mask.resize(pfp.size, Image.Resampling.LANCZOS)
     mask = ImageChops.darker(mask, pfp.split()[-1])
     pfp.putalpha(mask)
     return pfp
@@ -97,7 +97,7 @@ def welcomepic(pic, user, chatname, id, uname, brightness_factor=1.3):
     draw = ImageDraw.Draw(background)
     font = ImageFont.truetype('JioSavaan/assets/font.ttf', size=110)
     welcome_font = ImageFont.truetype('JioSavaan/assets/font.ttf', size=61)
-    
+#Module Made By @ProBotts || Dev - @YasirAkhtar
     draw.text((490, 778), f'{user}', fill=(23, 156, 241), font=font)
     draw.text((315, 890), f'{id}', fill=(34, 34, 34), font=font)
     draw.text((700, 1010), f"@{uname}", fill=(34, 34, 34), font=font)
