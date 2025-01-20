@@ -34,7 +34,7 @@ from JioSavaan.utils.exceptions import AssistantErr
 from JioSavaan.utils.formatters import check_duration, seconds_to_min, speed_converter
 from JioSavaan.utils.inline.play import stream_markup
 from JioSavaan.utils.stream.autoclear import auto_clean
-from JioSavaan.utils.thumbnails import get_thumb
+from JioSavaan.utils.thumbnails import gen_thumb
 from strings import get_string
 
 autoend = {}
