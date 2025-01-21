@@ -50,7 +50,7 @@
 
         "description": "A Bot's token from Botfather",
 
-        "value": "7940603237:AAGvLtMV-WhNPyR2_odpyE4vtFq9MqQJeOU",
+        "value": "7940603237:AAEc-1pTL-ZHSPB_dr7Si3PT_JSYOAzJDjo",
 
         "required": true
 
@@ -80,7 +80,7 @@
 
         "description": "A Pyrogram v2 String Session from Replit.",
 
-        "value": "BQC86fAAVClOG14AbdQ0E5C15jJTO2Ft4uyZnFZtgSWt2wdDAhVkZSZdiFSeBpfLCtrR6WP9sNJY2nvZX0ux_BeBacFWGoGS9yGgup3ODPc5yfD7jF0PFZsdXWP4cwZEdYr8Zo_B28Dxh_1hwBigNz41wODoG6i2P59r_cc2ckNHuwxe66PSKyDqQpe0MjpkSx8RnRkcuGRRpDpb71YWrAdRyTpz5qda-Oi8TrZpdvoQYanBhWI9RNEM7ZrgQYsfGo6XfFT8kPvJRY4sFxufmX-TUk0znzuOVgIkRe8MnCNZWU-1E9pKFbh4CjruXhD1yUYRMySgsaIAaElxcAv2L-CF8yH6DgAAAAHoTI4-AA",
+        "value": "BQC86fAAVIOtHJcXE1N1RYfizLlLBUnrLf5GMR51s1GnQAHgbc25I532qvHfe1mYidILWzcE6woeNw66DQBXm4WzJYNcKcumn2rl2unxjqktkMU8fIzF69CSGVMWuHiepG8h1tCb-8jspUf19Y7IuVd5hg5lRn7CddUhGMhp_G5hnmRrgJ1zZtpRyfSrdgSlcEANB8gHsUF8txifXYarSA6t4LK4dVgrG6AVMAzLvRYo2zuUffSbNop3O7s_3x-Z3E5JMqgXJPS5udvc4W1xj-ZdWnHEATeXxySEsz1NvBaYrJLMJa6lu-ol_Qc7ACS3h3Q2BafS0UVHPiQFwR_YIwOHGdn3zQAAAAHoTI4-AA",
 
         "required": true
 
