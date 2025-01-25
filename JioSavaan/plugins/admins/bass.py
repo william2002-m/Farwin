@@ -1,13 +1,13 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from AnonXMusic import app
-from AnonXMusic.core.call import Anony
-from AnonXMusic.misc import SUDOERS, db
-from AnonXMusic.utils import AdminRightsCheck
-from AnonXMusic.utils.database import is_active_chat, is_nonadmin_chat
-from AnonXMusic.utils.decorators.language import languageCB
-from AnonXMusic.utils.inline import close_markup, bass_markup
+from JioSavaan import app
+from JioSavaan.core.call import Anony
+from JioSavaan.misc import SUDOERS, db
+from JioSavaan.utils import AdminRightsCheck
+from JioSavaan.utils.database import is_active_chat, is_nonadmin_chat
+from JioSavaan.utils.decorators.language import languageCB
+from JioSavaan.utils.inline import close_markup, bass_markup
 from config import BANNED_USERS, adminlist
 
 checker = []
