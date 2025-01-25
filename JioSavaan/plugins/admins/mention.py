@@ -1,5 +1,5 @@
 import asyncio
-from JioSavaan.enums import ChatType, ChatMemberStatus
+from pyrogram.enums import ChatType, ChatMemberStatus
 from JioSavaan import app
 from pyrogram import filters
 from JioSavaan.utils.Shukla_ban import admin_filter
