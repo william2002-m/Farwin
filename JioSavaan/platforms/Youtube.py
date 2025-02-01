@@ -15,7 +15,7 @@ from JioSavaan.utils.database import is_on_off
 from JioSavaan.utils.formatters import time_to_seconds
 
 
-cookies_file = "AmritaXMusic/assets/cookies.txt"
+cookies_file = "cookies/vvvvt.txt"
 
 def cookies():
     folder_path = f"{os.getcwd()}/cookies"
