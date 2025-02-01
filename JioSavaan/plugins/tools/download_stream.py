@@ -9,8 +9,8 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from youtubesearchpython import SearchVideos
 from yt_dlp import YoutubeDL
 
-from VIPMUSIC import app
-from VIPMUSIC.platforms.Youtube import cookies as cookie_txt_file
+from JioSavaan import app
+from JioSavaan.platforms.Youtube import cookies as cookie_txt_file
 
 # Define a dictionary to track the last query timestamp for each user
 user_last_CallbackQuery_time = {}
