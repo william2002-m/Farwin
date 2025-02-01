@@ -368,6 +368,7 @@ class YouTubeAPI:
                         "postprocessor_args": [
                             "-ar", "44100",
                             "-ac", "2",
+                        ],
                     }
                 ],
             }
