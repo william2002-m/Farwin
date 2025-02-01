@@ -22,12 +22,10 @@ from JioSavaan.misc import db
 from JioSavaan.utils.database import (
     add_active_chat,
     add_active_video_chat,
-    get_audio_bitrate,
     get_lang,
     get_loop,
     group_assistant,
     is_autoend,
-    get_video_bitrate,
     music_on,
     remove_active_chat,
     remove_active_video_chat,
