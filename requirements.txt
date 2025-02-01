@@ -10,6 +10,7 @@ heroku3
 httpx[http2]
 motor
 pillow
+wget
 psutil
 py-tgcalls==0.9.7
 pykeyboard
