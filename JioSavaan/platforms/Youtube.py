@@ -365,6 +365,9 @@ class YouTubeAPI:
                         "key": "FFmpegExtractAudio",
                         "preferredcodec": "mp3",
                         "preferredquality": "320",
+                        "postprocessor_args": [
+                            "-ar", "44100",
+                            "-ac", "2",
                     }
                 ],
             }
