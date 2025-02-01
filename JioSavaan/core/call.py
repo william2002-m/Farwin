@@ -21,7 +21,9 @@ from JioSavaan import LOGGER, YouTube, app
 from JioSavaan.misc import db
 from JioSavaan.utils.database import (
     add_active_chat,
+    get_audio_bitrate,
     add_active_video_chat,
+    get_video_bitrate,
     get_lang,
     get_loop,
     group_assistant,
