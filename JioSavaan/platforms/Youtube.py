@@ -15,6 +15,8 @@ from JioSavaan.utils.database import is_on_off
 from JioSavaan.utils.formatters import time_to_seconds
 
 
+cookies_file = "AmritaXMusic/assets/cookies.txt"
+
 def cookies():
     folder_path = f"{os.getcwd()}/cookies"
     txt_files = glob.glob(os.path.join(folder_path, "*.txt"))
@@ -22,6 +24,7 @@ def cookies():
         raise FileNotFoundError("No .txt files found in the specified folder.")
     cookie_txt_file = random.choice(txt_files)
     return f"""cookies/{str(cookie_txt_file).split("/")[-1]}"""
+
 
 
 def get_ytdl_options(ytdl_opts, commamdline=True) -> Union[str, dict, list]:
