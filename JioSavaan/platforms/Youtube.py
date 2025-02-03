@@ -365,9 +365,9 @@ class YouTubeAPI:
                        'key': 'FFmpegExtractAudio',
                         'preferredcodec': 'mp3',  
                         "preferredquality": "320",
-                        'audio_bitrate': "320k",    
+                        'audio_bitrate': "512k",    
                         'audio_channels': 2,
-                        'audio_sample_rate': '22050'
+                        'audio_sample_rate': '44100'
 
                     }
                 ],
