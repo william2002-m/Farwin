@@ -30,7 +30,7 @@
 
         "description": "Get this value from https://my.telegram.org",
 
-        "value": "27758016",
+        "value": "12380656",
 
         "required": true
 
@@ -40,7 +40,7 @@
 
         "description": "Get this value from https://my.telegram.org",
 
-        "value": "8d34cfffe27ab461eabbf0091b1a27df",
+        "value": "d927c13beaaf5110f25c505b7c071273",
 
         "required": true
 
@@ -50,7 +50,7 @@
 
         "description": "A Bot's token from Botfather",
 
-        "value": "7940603237:AAEIxyUxL0pMsB-W0xdidxbu92xy_XG7I2I",
+        "value": "7940603237:AAEJGjr6v8t3yUPwTomDZdSObNDX7NpK5f4",
 
         "required": true
 
@@ -80,7 +80,7 @@
 
         "description": "A Pyrogram v2 String Session from Replit.",
 
-        "value": "BQC86fAAKOEcN6eHbKEIWM_BCzA0eG6aN9IsDW87T4cP2SBUG0q25xD9p8lGsiqFLMP1DeaYrbrYNQ5AmhXOOsQ9iZQ0AlXNyWhNN7GiugOGB4pbHTNp5fZqXy689GZgKDDdAe9m29zLnvaRB9Ki2jfGbTY-hLqxxfTnq8N_sGftApBHt5Mx6UD2u2YXxzF7_xyO-detDnQy4TKTwicrXBxzaArtmzUYrmTph_S-y-b6CdrGPgXikBdbPJXXGQeNlc_qoqA-ajR2HWLtilhc5YbcqCeuqjIZdYLiZUoZE4CirqoI8vhvWa8GUPXES2uSvU322BpUnJKxXqXbnjhxX2pTyYBpBAAAAAHoTI4-AA",
+        "value": "BQC86fAARHdprVRwQQ0cs_AP79hGwkopQhBLALIzqGwUa7dGXyuJJZYhwkMMvmFOWyOC3X6GemqxILPW3-YTJqrSOGpS64Na2-Kud26xj-e0C69V35xrTzv7Bm33fq-HzDeec1m-FsecQoGWVWdxr-gpf9aznTVeZGe2X3Kg9um-XA9TUzplXTlSCALxYqavOgBk_gF1Wccxicr1SIRyW0eV4WEJhYooumYzelm5FK2yBRifM5K7SwrJPfR2zwHb_uLcwmVni18uenopCQTinX-5zx5tPf0AYUC3RKWvyiiru3U-7C6ZAUXeH_ljlnC3Ocm-3EF_dHO3L1mxqFKM6zUKtZlk1gAAAAHoTI4-AA",
 
         "required": true
 
