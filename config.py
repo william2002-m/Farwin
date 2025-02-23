@@ -26,7 +26,7 @@ OWNER_ID = "7364852621"
 
 ## Fill these variables if you're deploying on heroku.
 # Your heroku app name
-HEROKU_APP_NAME = "amrita42"
+HEROKU_APP_NAME = "amrita44"
 # Get it from http://dashboard.heroku.com/account
 HEROKU_API_KEY = "HRKU-a19e584b-5b15-4b76-b429-258cbfc20a8e"
 
@@ -62,7 +62,7 @@ TG_VIDEO_FILESIZE_LIMIT = int(getenv("TG_VIDEO_FILESIZE_LIMIT", 1073741824))
 
 
 # Get your pyrogram v2 session from @StringFatherBot on Telegram
-STRING1 = "BQC86fAACk-ufrJiuoMfv4tpVmuQqSlzjxj_cxTcFsZjuTWq6b7aCXDokMPFhv9KfplPmxug9H_6SgUGIUWOJZXp8r8iM5IrAncSK8artEjRS-2sidsiI69S-skWZiOxVMTEjFDxnH1GaNQN7bNKfYeUuVbmH_ZGRrOgCtJR1PpeLvu1T2K3eg56M6HT6ecaF4jsQ0Ei7xz6gwmqHZkDodzIQcGLk4T-BrIlZSJiVcgjfH45rW3GdSalQPIID_xDjxEZypDa-td5g5dw8DPMyLHgnYph89opuhgiuTPzwwR54daNljTFyrjmO-mXnCrmo8IgGbhtX6EOpO6XzguDl3Uo59j7TAAAAAHKf4CbAA"
+STRING1 = "BQC86fAAmKPgcZQyo-KYBNDCwhj4A6MFaGhrpft7RFDmEtl2V_r7J6oy6E7re0pHPRLf7AMMTSbDZeXelqMjZNQxkYYlHL6Owo_2qZOBybJdLyBcH0DeY6HyLevSCWiEFEA_oYmfMudAEm60GuWqUkNpBBzT-RnLGRToXLt5WLGAt8Ii9TYiEUhz-Rsnihzllvkc_I0dQ7tMpMSF1f5Z5VfPYdZIPO_MJyiv_fX_viHW5k6ZXNNxXVJk9bue_-GoWhakjOUESty_UIW6KSCI6kQPWF-MPQMF2sx5BC9khRtt1Yn-QGwBkzfqXQLKXJGSplTxzDQAX0AQyJFv-GZmJ7yCLdEnGAAAAAHKf4CbAA"
 STRING2 = getenv("STRING_SESSION2", None)
 STRING3 = getenv("STRING_SESSION3", None)
 STRING4 = getenv("STRING_SESSION4", None)
