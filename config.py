@@ -11,10 +11,10 @@ API_ID = "27758016"
 API_HASH = "8d34cfffe27ab461eabbf0091b1a27df"
 
 # Get your token from @BotFather on Telegram.
-BOT_TOKEN = "7929316278:AAErd_5Qy2i3UktIopt_wyfRQLudUe8Lvz0"
+BOT_TOKEN = "7632736990:AAEciuOcUzLVKKBYEwsmpcVLVpsbCEkKBX0"
 
 # Get your mongo url from cloud.mongodb.com
-MONGO_DB_URI = "mongodb+srv://tennyson2002:tennyson2002@cluster0.h1vm3.mongodb.net/?retryWrites=true&w=majority&appName=Cluste0"
+MONGO_DB_URI = "mongodb+srv://cookies2002boy:cookies2002boy@cluster0.bc2ox.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 
 DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 6000))
 
@@ -26,13 +26,13 @@ OWNER_ID = "7364852621"
 
 ## Fill these variables if you're deploying on heroku.
 # Your heroku app name
-HEROKU_APP_NAME = "amrita44"
+HEROKU_APP_NAME = "farwin04"
 # Get it from http://dashboard.heroku.com/account
 HEROKU_API_KEY = "HRKU-a19e584b-5b15-4b76-b429-258cbfc20a8e"
 
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/Block2002/Amrita",
+    "https://github.com/william2002-m/Farwin",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 GIT_TOKEN = getenv(
@@ -40,7 +40,7 @@ GIT_TOKEN = getenv(
 )  # Fill this variable if your upstream repository is private
 
 SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/THE_ARCHITECT_II")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/Tamil_Chat_TSS")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/TamilChatNL")
 
 # Set this to True if you want the assistant to automatically leave chats after an interval
 AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", False))
@@ -62,7 +62,7 @@ TG_VIDEO_FILESIZE_LIMIT = int(getenv("TG_VIDEO_FILESIZE_LIMIT", 1073741824))
 
 
 # Get your pyrogram v2 session from @StringFatherBot on Telegram
-STRING1 = "BQC86fAAmKPgcZQyo-KYBNDCwhj4A6MFaGhrpft7RFDmEtl2V_r7J6oy6E7re0pHPRLf7AMMTSbDZeXelqMjZNQxkYYlHL6Owo_2qZOBybJdLyBcH0DeY6HyLevSCWiEFEA_oYmfMudAEm60GuWqUkNpBBzT-RnLGRToXLt5WLGAt8Ii9TYiEUhz-Rsnihzllvkc_I0dQ7tMpMSF1f5Z5VfPYdZIPO_MJyiv_fX_viHW5k6ZXNNxXVJk9bue_-GoWhakjOUESty_UIW6KSCI6kQPWF-MPQMF2sx5BC9khRtt1Yn-QGwBkzfqXQLKXJGSplTxzDQAX0AQyJFv-GZmJ7yCLdEnGAAAAAHKf4CbAA"
+STRING1 = "BQC86fAAnWkH4HHxKsfwL6TOfhrngNf9D3D1f1tYeqDIc-NvI9HSyxfJPQTX6wSN7efTcfZ0Z3bUEVhKGNJBVY6apB9UYhL22B5adwsbdHliI2mnr2Ezmetb3Yx-P31kYL7Bdx0hy3t-gkdJw8Fmwn8Wkqr2Mr-iAHqNSu6-Wl3arie_bTNZwfQ2aPhsaM_6r0YDo06EZgMf4zu6IPJCUr1Hwv_44OnMkF2WlShuu-QvcdB_ORlO1gFAB_VWKP8GggvgLN_iBFtj8OwWPExkPvqE4Q6D63zB49-7fmzEOSR9HTW7JK38ce2e8ToKbeY6hbIUg42_UxCd3sKjj4AfZDYBd_3-OQAAAAHjgUoeAA"
 STRING2 = getenv("STRING_SESSION2", None)
 STRING3 = getenv("STRING_SESSION3", None)
 STRING4 = getenv("STRING_SESSION4", None)
