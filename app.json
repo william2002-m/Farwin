@@ -50,7 +50,7 @@
 
         "description": "A Bot's token from Botfather",
 
-        "value": "7929316278:AAErd_5Qy2i3UktIopt_wyfRQLudUe8Lvz0",
+        "value": "7632736990:AAEciuOcUzLVKKBYEwsmpcVLVpsbCEkKBX0",
 
         "required": true
 
@@ -60,7 +60,7 @@
 
         "description": "Get a mongodb url from https://cloud.mongodb.com.",
 
-        "value": "mongodb+srv://tennyson2002:tennyson2002@cluster0.h1vm3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+        "value": "mongodb+srv://cookies2002boy:cookies2002boy@cluster0.bc2ox.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
 
         "required": true
 
@@ -80,7 +80,7 @@
 
         "description": "A Pyrogram v2 String Session from Replit.",
 
-        "value": "BQC86fAAmKPgcZQyo-KYBNDCwhj4A6MFaGhrpft7RFDmEtl2V_r7J6oy6E7re0pHPRLf7AMMTSbDZeXelqMjZNQxkYYlHL6Owo_2qZOBybJdLyBcH0DeY6HyLevSCWiEFEA_oYmfMudAEm60GuWqUkNpBBzT-RnLGRToXLt5WLGAt8Ii9TYiEUhz-Rsnihzllvkc_I0dQ7tMpMSF1f5Z5VfPYdZIPO_MJyiv_fX_viHW5k6ZXNNxXVJk9bue_-GoWhakjOUESty_UIW6KSCI6kQPWF-MPQMF2sx5BC9khRtt1Yn-QGwBkzfqXQLKXJGSplTxzDQAX0AQyJFv-GZmJ7yCLdEnGAAAAAHKf4CbAA",
+        "value": "BQC86fAAnWkH4HHxKsfwL6TOfhrngNf9D3D1f1tYeqDIc-NvI9HSyxfJPQTX6wSN7efTcfZ0Z3bUEVhKGNJBVY6apB9UYhL22B5adwsbdHliI2mnr2Ezmetb3Yx-P31kYL7Bdx0hy3t-gkdJw8Fmwn8Wkqr2Mr-iAHqNSu6-Wl3arie_bTNZwfQ2aPhsaM_6r0YDo06EZgMf4zu6IPJCUr1Hwv_44OnMkF2WlShuu-QvcdB_ORlO1gFAB_VWKP8GggvgLN_iBFtj8OwWPExkPvqE4Q6D63zB49-7fmzEOSR9HTW7JK38ce2e8ToKbeY6hbIUg42_UxCd3sKjj4AfZDYBd_3-OQAAAAHjgUoeAA",
 
         "required": true
 
@@ -90,7 +90,7 @@
 
         "description": "Your Heroku account's API key",
 
-        "value": "",
+        "value": "HRKU-852706f4-8cba-4108-912f-e6b0f4a788a8",
 
         "required": false
 
@@ -100,7 +100,7 @@
 
         "description": "Your heroku app name",
 
-        "value": "",
+        "value": "farwin04",
 
         "required": false
 
